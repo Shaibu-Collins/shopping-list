@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shopping list</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- <link rel="stylesheet" href="../dom/shopping-list/fontawesome-free-6.7.2-web/css/all.min.css"> -->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+        <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
+
+        
+    </head>
+    <body>
+        <div class="container">
+            <head>
+                <img src="notes-icon.webp" alt="" style="width: 50px; height: 50px;">
+                <h1>Shopping List</h1>
+            </head>
+            <form id="item-form">
+                <div class="form-control">
+                    <input type="text" class="form-input" id="item-input" name="item" placeholder="Enter item">
+                     
+                </div>
+                <div class="form-control">
+                    <button type="submit" class="btn">
+                        <i class="fa-solid fa-plus">Add Item</i>
+                    </button>
+                </div>
+            </form>
+            <!-- <a href="https://google.com">GOOGLE</a> -->
+            <div class="filter">
+                <input type="text" class="form-input-filter" id="filter" placeholder="Filter Items">
+            </div> 
+
+            <!-- <!-select input --> 
+             <!-- <select name="priority" id="priority-input" class="form-input">
+                <option value="0">Select Priority</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+             </select> -->
+
+             <!-- checkbox input -->
+              <!-- <input type="checkbox" id="checkbox" >
+              Recurring item -->
+            <ul id="item-list" class="items">
+                <!-- <li>Apples
+                    <button class="remove-item btn-link text-red">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </li>
+                <li>Orange Juice
+                    <button class="remove-item btn-link text-red">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </li>
+                <li>Eggs
+                    <button class="remove-item btn-link text-red">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </li>
+                <li>Milk
+                    <button class="remove-item btn-link text-red">
+                        <i class="fa-solid fa-xmark"></i>
+
+                     </button> 
+                </li> 
+                <li>Eggnogs
+                    <button class="remove-item btn-link text-red">
+                        <i class="fa-solid fa-xmark"></i>
+
+                     </button> 
+                </li>  -->
+            </ul>
+            <button id="clear" class="btn-clear">Clear All</button>
+        </div>
+        </div> 
+
+
+        <script src="script.js"></script>
+        </body>
