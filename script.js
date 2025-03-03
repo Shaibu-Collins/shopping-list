@@ -11,7 +11,7 @@ let isEditMode = false;
 
 function displayItems(){
     const itemsFromStorage = getItemsFromStorage();
-    itemsFromStorage.forEach(item =>addItemToDOM(item));
+    itemsFromStorage.forEach((item) => addItemToDOM(item));
     checkUI();
 }
 
@@ -122,23 +122,28 @@ function onClickItem(e){
     }
 }
 
-// 11: set items to edit
-function setItemToEdit(item){
-    isEditMode = true;
-
-    itemList.querySelectorAll('li').forEach((i) => i.classList.remove('edit-mode'));
-    item.classList.add('edit-mode');
-    formBtn.innerHTML = '<i class="fa-solid fa-pen"></i> Update Item';
-    formBtn.style.backgroundColor = '#228B28';
-    itemInput.value = item.textContent;
-}
 
 // 13: prevent duplicaate
 function checkIfItemExists(item){
     const itemsFromStorage = getItemsFromStorage();
     return itemsFromStorage.includes(item);
   
+};
+
+// 11: set items to edit
+function setItemToEdit(item){
+    isEditMode = true;
+
+    itemList
+    .querySelectorAll('li')
+    .forEach((i) => i.classList.remove('edit-mode'));
+    item.classList.add('edit-mode');
+    formBtn.innerHTML = '<i class="fa-solid fa-pen"></i>  Update Item';
+    formBtn.style.backgroundColor = '#228B22';
+    itemInput.value = item.textContent;
 }
+
+
 // 04:remove item
 function removeItem(item){
     if(confirm('Are you sure?')){
@@ -152,8 +157,9 @@ function removeItem(item){
     
 };
 
-function removeItemFromStorage() {
-    const itemsFromStorage = getItemsFromStorage();
+function removeItemFromStorage(item) {
+    let itemsFromStorage = getItemsFromStorage()
+   // const itemsFromStorage = getItemsFromStorage();
     
     // filter out items to be remove
     itemsFromStorage = itemsFromStorage.filter((i) => i !== item);
